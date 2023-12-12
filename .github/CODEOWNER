@@ -1,0 +1,16 @@
+*       @global-owner1 @global-owner2
+*.js    @js-owner
+*.go    docs@example.com
+*.txt   @octo-org/octocats
+/build/logs/ @doctocat
+docs/*  docs@example.com
+apps/ @octocat
+/docs/ @doctocat
+/scripts/ @doctocat @octocat
+**/logs @octocat
+
+/apps/ @octocat
+/apps/github
+
+/apps/ @octocat
+/apps/github @doctocat
