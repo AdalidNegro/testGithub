@@ -1,0 +1,19 @@
+on:
+  workflow_call:
+    inputs:
+      node_version:
+        type: string
+        required: false
+        default: "14"
+      environment_stage:
+        type: string
+        required: true
+    secrets:
+      AWS_TOKEN:
+      required: true
+jobs:
+  detect-secrets:
+    name: Detect Secrets
+    uses: "PS-GH-Pipelines/detect-secrets/.github/workflows/main.yml@v1.0.0"
+    secrets:
+      AWS_TOKEN: ${{ secrets.AWS_TOKEN }}
